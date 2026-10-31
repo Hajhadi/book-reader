@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AetherVox - AI Audio-Book Producer</title>
+    <meta name="description" content="Convert full books into complete, unabridged 10-minute multi-episode audiobook series with voice configuration, tone analysis, and TTS export." />
+    <meta property="og:title" content="AetherVox - AI Audio-Book Producer" />
+    <meta property="og:description" content="Convert full books into complete, unabridged 10-minute multi-episode audiobook series with voice configuration, tone analysis, and TTS export." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Suppress harmless Vite HMR WebSocket connection errors in dev container iframe
+      window.addEventListener('error', function (event) {
+        var msg = (event && (event.message || '')) + '';
+        var filename = (event && (event.filename || '')) + '';
+        var stack = (event && event.error && event.error.stack ? event.error.stack : '') + '';
+        if (
+          msg.indexOf('WebSocket') !== -1 ||
+          filename.indexOf('@vite/client') !== -1 ||
+          stack.indexOf('@vite/client') !== -1 ||
+          stack.indexOf('createWebSocketModuleRunnerTransport') !== -1
+        ) {
+          event.preventDefault();
+          event.stopPropagation();
+          return true;
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function (event) {
+        var reason = event && event.reason;
+        var msg = (typeof reason === 'string' ? reason : (reason && reason.message) || '') + '';
+        var stack = (reason && reason.stack ? reason.stack : '') + '';
+        if (
+          msg.indexOf('WebSocket') !== -1 ||
+          stack.indexOf('@vite/client') !== -1 ||
+          stack.indexOf('createWebSocketModuleRunnerTransport') !== -1 ||
+          msg.indexOf('@vite/client') !== -1
+        ) {
+          event.preventDefault();
+          event.stopPropagation();
+          return true;
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

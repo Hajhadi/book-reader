@@ -1,0 +1,6 @@
+{
+  "name": "AetherVox - AI Audio-Book Producer",
+  "description": "Convert full books into complete, unabridged 10-minute multi-episode audiobook series with voice configuration, tone analysis, and TTS export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
